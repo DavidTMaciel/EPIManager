@@ -6,6 +6,43 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "mysql"
   url      = env("DATABASE_URL")
+}
+
+model User{
+  id  Int      @id @default(autoincrement())
+  name String
+  email String @unique
+  password String
+  admin Boolean
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Collaborator{
+  id  Int      @id @default(autoincrement())
+  name String
+  function String
+  admission_Date String
+  constructions String
+  company String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  release ReleaseForm[]
+}
+
+model ListEpis{
+  id  Int      @id @default(autoincrement())
+  name String
+  release ReleaseForm[]
+
+}
+
+model ReleaseForm{
+  id Int @id @default(autoincrement())
+  collaboratorID Int
+  collaborator Collaborator @relation(fields: [collaboratorID], references: [id])
+  listEpisId Int
+  listEpis ListEpis @relation(fields: [listEpisId], references: [id])
 }
