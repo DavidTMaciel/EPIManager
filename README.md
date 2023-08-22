@@ -1,4 +1,4 @@
-# EPI_release
+# EPIManager - Gerenciador de Liberação de Equipamento de Proteção Individual (EPI)
 
 ## Sobre o Projeto
 O projeto é uma API desenvolvida para gerenciar a liberação de Equipamentos de Proteção Individual (EPIs) para colaboradores. A plataforma permite que os usuários (administradores) cadastrem colaboradores, associando a eles informações individuais, como nome, função, data de admissão e empresa. Cada colaborador tem uma ficha única onde são registrados os detalhes de todos os EPIs liberados, incluindo data, tipo de EPI e detalhes específicos. Além disso, a API mantém um catálogo de itens que podem ser liberados como EPIs, facilitando o processo de liberação.
