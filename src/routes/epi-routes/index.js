@@ -3,9 +3,11 @@ import { deleteEpiId } from "../../controllers/Epis/delete";
 import { listEpis } from "../../controllers/Epis/read";
 import { updateEpiId } from "../../controllers/Epis/update";
 
-export const routesEpi = app =>{
-    app.post('/create-new-epi', createNewEpi);
-    app.put('/update-epi/:id', updateEpiId);
-    app.get('/list-epis', listEpis);
-    app.delete('/delete-epi/:id', deleteEpiId);
+export const routesEpi = (fastify, options, done) =>{
+    fastify.post('/create-new-epi', createNewEpi);
+    fastify.put('/update-epi/:id', updateEpiId);
+    fastify.get('/list-epis', listEpis);
+    fastify.delete('/delete-epi/:id', deleteEpiId);
 }
+
+export default routesEpi;
