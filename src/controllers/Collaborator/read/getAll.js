@@ -1,12 +1,12 @@
 import { getAll } from "../../../repositorys/Collaborator/read/listAllCollaborator";
 
-export const listAllCollaborators = async (req, res) => {
+export const listAllCollaborators = async (request, reply) => {
     try{
         const collaborator = await getAll();
 
-        res.status(200).send(collaborator);
+        reply.code(200).send(collaborator);
 
     }catch(err){
-        res.status(400).send(err)
+        reply.code(400).send(err)
     }
 };

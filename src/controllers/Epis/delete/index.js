@@ -1,12 +1,12 @@
 import { deleteEpi } from "../../../repositorys/Epis/delete";
 
-export const deleteEpiId = async (req, res) =>{
+export const deleteEpiId = async (request, reply)=>{
 
     try{
-        const epi = await deleteEpi(Number(req.params.id));
+        const epi = await deleteEpi(Number(request.params.id));
 
-        res.status(200).send(epi);
+        reply.code(200).send(epi);
     }catch(err){
-        res.status(400).send(err);
+        reply.code(400).send(err);
     };
 }

@@ -1,14 +1,14 @@
 import { updateEpi } from "../../../repositorys/Epis/update";
 
-export const updateEpiId = async (req,res) =>{
+export const updateEpiId = async (request, reply) =>{
 
     try{
-        const updateData = req.body;
+        const updateData = request.body;
 
-        const epi = await updateEpi(Number(req.params.id), updateData)
+        const epi = await updateEpi(Number(request.params.id), updateData)
 
-        res.status(200).send(epi);
+        reply.code(200).send(epi);
     }catch(err){
-        res.status(400).send(err);
+        reply.code(400).send(err);
     }
 }

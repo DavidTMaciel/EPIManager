@@ -1,17 +1,17 @@
 import { createEpis } from "../../../repositorys/Epis/create";
 import { epiValidation } from "../../../validations/epi/epi.validations";
 
-export const createNewEpi = async(req, res)=>{
+export const createNewEpi = async (request, reply)=>{
 
     try{
-        await epiValidation.validate(req.body)
+        await epiValidation.validate(request.body)
         
-        const data = req.body;
+        const data = request.body;
         const epi = await createEpis(data);
 
-        res.status(200).send(epi);
+        reply.code(200).send(epi);
 
     }catch(err){
-        res.status(400).send(err);
+        reply.code(400).send(err);
     }
 }

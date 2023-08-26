@@ -1,12 +1,12 @@
 import { getAllEpi } from "../../../repositorys/Epis/read/listEpis";
 
-export const listEpis = async (req, res) =>{
+export const listEpis = async (request, reply) =>{
     
     try{
         const epis = await getAllEpi();
 
-        res.status(200).send(epis);
+        reply.code(200).send(epis);
     }catch(err){
-        res.status(400).send(err);
+        reply.code(400).send(err);
     }
 }

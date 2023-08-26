@@ -1,14 +1,14 @@
 import { updateCollaborator } from "../../../repositorys/Collaborator/update";
 
-export const updateCollaboratorById = async (req, res) =>{
+export const updateCollaboratorById = async (request, reply)=>{
 
     try{
-        const dataUpdate = req.body
-        const collaborator = await updateCollaborator(Number(req.params.id), dataUpdate);
+        const dataUpdate = request.body
+        const collaborator = await updateCollaborator(Number(request.params.id), dataUpdate);
 
-        res.status(200).send(collaborator);
+        reply.code(200).send(collaborator);
 
     }catch(err){
-        res.status(400).send(err);
+        reply.code(400).send(err);
     };
 }

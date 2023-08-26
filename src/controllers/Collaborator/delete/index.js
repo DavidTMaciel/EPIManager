@@ -1,11 +1,11 @@
 import { deleteCollaborator } from "../../../repositorys/Collaborator/delete";
 
-export const deleteCollaboratorById = async (req, res) =>{
+export const deleteCollaboratorById = async (request, reply) =>{
     try{
-        const collaborator = await deleteCollaborator(Number(req.params.id));
+        const collaborator = await deleteCollaborator(Number(request.params.id));
         
-        res.status(200).send(collaborator);
+        reply.code(200).send(collaborator);
     }catch(err){
-        res.status(400).send(err);
+        reply.code(400).send(err);
     };
 }

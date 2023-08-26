@@ -1,14 +1,14 @@
 import { getUniqueCollaborator } from "../../../repositorys/Collaborator/read/listCollaborator";
 
 
-export const listUniqueCollaborators = async (req, res) => {
+export const listUniqueCollaborators = async (request, reply) => {
     try{
 
-        const collaborator = await getUniqueCollaborator(Number(req.params.id));
+        const collaborator = await getUniqueCollaborator(Number(request.params.id));
 
-        res.status(200).send(collaborator);
+        reply.code(200).send(collaborator);
 
     }catch(err){
-        res.status(400).send(err)
+        reply.code(400).send(err)
     }
 };
