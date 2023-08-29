@@ -1,6 +1,8 @@
 require('@babel/register');
+const {generateEpi} = require('../Mocking/generateEpi')
 const Fastify = require('fastify');
 import fastifyRoutes from '../../routes';
+
  
 describe('POST /create-new-epi', () => {
   const fastify = Fastify()
@@ -15,22 +17,20 @@ describe('POST /create-new-epi', () => {
     await fastify.close();
   });
 
-    it('should return 200 with valid input', async () => {
-    const validData = {
-      name: 'bota'
-    };
+  test('should return 200 with valid input', async () => {
+    const epi = generateEpi();
 
     const response = await fastify.inject({
       method: 'POST',
       url:'/create-new-epi',
-      payload: validData
+      payload: epi
     })
 
     expect(response.statusCode).toBe(200);
     
   })
 
-  it('should return 400 with invalid input', async ()=>{
+  test('should return 400 with invalid input', async ()=>{
     const validData = {
 
     };
@@ -43,7 +43,7 @@ describe('POST /create-new-epi', () => {
     expect(response.statusCode).toBe(400);
   });
 
-  it('should return 400 with invalid', async ()=>{
+  test('should return 400 with invalid', async ()=>{
     const validData = {
       name: 1,
     };
@@ -55,5 +55,98 @@ describe('POST /create-new-epi', () => {
 
     expect(response.statusCode).toBe(400);
   });
-  
+  test('should read all epi', async ()=>{
+
+    const response = await fastify.inject({
+      method: 'GET',
+      url:'/list-epis',     
+    });
+
+    expect(response.statusCode).toBe(200);
+
+  });
+  test('should update epi', async ()=>{
+
+    const epi = generateEpi();
+
+    const createEpiResponse = await fastify.inject({
+      method:'POST',
+      url:'/create-new-epi',
+      payload: epi
+    })
+
+    const createEpi = await JSON.parse(createEpiResponse.payload);
+
+    const updateData = generateEpi();
+
+    const response = await fastify.inject({
+      method: 'PUT',
+      url:`/update-epi/${createEpi.id}`,
+      payload: updateData  
+    });
+
+    expect(response.statusCode).toBe(200);
+
+  });
+  test('should error when updating app without name', async ()=>{
+
+    const epi = generateEpi();
+
+    const createEpiResponse = await fastify.inject({
+      method:'POST',
+      url:'/create-new-epi',
+      payload: epi
+    })
+
+    const createEpi = await JSON.parse(createEpiResponse.payload);
+
+    const updateData = {
+      name:''
+    }
+
+    const response = await fastify.inject({
+      method: 'PUT',
+      url:`/update-epi/${createEpi.id}`,
+      payload: updateData  
+    });
+    const responseBody = JSON.parse(response.payload);
+
+    expect(response.statusCode).toBe(400);
+    expect(responseBody.message).toBe('Invalid argument name');
+
+  });
+  test('should delete epi', async () => {
+
+    const epi = generateEpi();
+
+    const createEpiResponse = await fastify.inject({
+      method:'POST',
+      url:'/create-new-epi',
+      payload: epi
+    })
+
+    const createEpi = await JSON.parse(createEpiResponse.payload);
+
+    const response = await fastify.inject({
+      method:'DELETE',
+      url:`/delete-epi/${createEpi.id}`,
+      payload: epi
+    })
+
+    expect(response.statusCode).toBe(200);
+  })
+  test('should', async () => {
+    const epi = {
+
+    };
+
+    const response = await fastify.inject({
+      method:'DELETE',
+      url:`/delete-epi/${epi.id}`,
+      payload: epi
+    })
+    const responseBody = JSON.parse(response.payload);
+    expect(response.statusCode).toBe(400);
+    expect(responseBody.message).toBe('id not exist')
+  })
 });
