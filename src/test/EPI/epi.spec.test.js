@@ -1,25 +1,32 @@
 require('@babel/register');
-const request = require('supertest');
-const express = require('express');
-
-const { createNewEpi } = require('../../controllers/Epis/create');
+const Fastify = require('fastify');
+import fastifyRoutes from '../../routes';
  
-
-const app = express();
-app.use(express.json());
-app.post('/create-new-epi', createNewEpi);
-
 describe('POST /create-new-epi', () => {
+  const fastify = Fastify()
+
+  fastify.register(fastifyRoutes)
+
+  beforeAll(async () => {
+    await fastify.ready();
+  });
+
+  afterAll(async () => {
+    await fastify.close();
+  });
+
     it('should return 200 with valid input', async () => {
     const validData = {
       name: 'bota'
     };
 
-    const response = await request(app)
-      .post('/create-new-epi')
-      .send(validData);
+    const response = await fastify.inject({
+      method: 'POST',
+      url:'/create-new-epi',
+      payload: validData
+    })
 
-    expect(response.status).toBe(200);
+    expect(response.statusCode).toBe(200);
     
   })
 
@@ -27,21 +34,26 @@ describe('POST /create-new-epi', () => {
     const validData = {
 
     };
-    const response = await request(app)
-    .post('/create-new-epi')
-    .send(validData);
+    const response = await fastify.inject({
+      method: 'POST',
+      url:'/create-new-epi',
+      payload: validData
+    })
 
-    expect(response.status).toBe(400);
+    expect(response.statusCode).toBe(400);
   });
 
   it('should return 400 with invalid', async ()=>{
     const validData = {
       name: 1,
     };
-    const response = await request(app)
-    .post('/create-new-epi')
-    .send(validData);
+    const response = await fastify.inject({
+      method: 'POST',
+      url:'/create-new-epi',
+      payload: validData
+    })
 
-    expect(response.status).toBe(400);
+    expect(response.statusCode).toBe(400);
   });
+  
 });
