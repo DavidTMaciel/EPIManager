@@ -1,5 +1,5 @@
 require('@babel/register');
-const { generateUser } = require('./userGenerate'); // Substitua pelo caminho correto para o arquivo de mock
+const { generateUser } = require('../Mocking/userGenerate'); // Substitua pelo caminho correto para o arquivo de mock
 const Fastify = require('fastify');
 import fastifyRoutes from '../../routes';
 
@@ -110,5 +110,42 @@ describe('User Creation', () => {
     expect(response.statusCode).toBe(400);
 
   })
+  test('Should list a users', async () => {
+    const user = generateUser();
 
+    const createdUserResponse = await fastify.inject({
+      method: 'POST',
+      url: '/create-new-user',
+      payload: user,
+    });
+
+    const createdUser = JSON.parse(createdUserResponse.payload);
+    
+    const response = await fastify.inject({
+      method: 'GET',
+      url: `/users`,
+      payload:user
+    })
+
+    expect(response.statusCode).toBe(200);
+  });
+  test('Should list a user', async () => {
+    const user = generateUser();
+
+    const createdUserResponse = await fastify.inject({
+      method: 'POST',
+      url: '/create-new-user',
+      payload: user,
+    });
+
+    const createdUser = JSON.parse(createdUserResponse.payload);
+    
+    const response = await fastify.inject({
+      method: 'GET',
+      url: `/user/${createdUser.id}`,
+      payload:user
+    })
+
+    expect(response.statusCode).toBe(200);
+  });
 });
