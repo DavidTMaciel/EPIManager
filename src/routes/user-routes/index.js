@@ -6,10 +6,11 @@ import { updateUserById } from "../../controllers/User/update"
 
 export const routesUser = (fastify) =>{
 
-    fastify.get('/users', getAllUsers)
+    
     fastify.post('/create-new-user', createNewUser)
     fastify.put('/update-user/:id', updateUserById)
     fastify.delete('/delete-user/:id', deleteUserById)
+    fastify.get('/users', getAllUsers)
     fastify.get('/user/:id', getUser)
 
 }
