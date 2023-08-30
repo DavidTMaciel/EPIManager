@@ -7,7 +7,7 @@ O projeto é uma API desenvolvida para gerenciar a liberação de Equipamentos d
 Aqui estão as principais tecnologias utilizadas no desenvolvimento do projeto, conforme o arquivo package.json:
 <ul>
 <li>Prisma: Um ORM (Object-Relational Mapping) que facilita o acesso e manipulação do banco de dados MySQL.</li>
-<li>Express: Um framework web para Node.js que simplifica a criação de APIs e gerenciamento de rotas.</li>
+<li>Fastify: Um framework web extremamente eficiente e de alto desempenho para Node.js, projetado para simplificar a criação de APIs e o gerenciamento de rotas com velocidade e eficiência impressionantes.</li>
 <li>dotenv: Uma biblioteca para carregar variáveis de ambiente a partir de um arquivo .env, mantendo as informações sensíveis seguras.</li>
 <li>cors: Um middleware para habilitar as configurações de CORS (Cross-Origin Resource Sharing) e controlar a segurança das solicitações HTTP.</li>
 <li>yup: Uma biblioteca para validação de dados, garantindo que os dados de entrada atendam aos critérios definidos.</li>
