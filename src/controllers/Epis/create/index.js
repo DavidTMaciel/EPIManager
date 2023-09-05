@@ -1,5 +1,5 @@
 import { createEpis } from "../../../repositorys/Epis/create";
-import { epiValidation } from "../../../validations/epi/epi.validations";
+import { epiValidation } from "../../../validations/validations";
 
 export const createNewEpi = async (request, reply)=>{
 
