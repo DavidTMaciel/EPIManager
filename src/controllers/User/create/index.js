@@ -1,5 +1,5 @@
 import { createUser } from "../../../repositorys/user/create";
-import { userValidation } from "../../../validations/epi/epi.validations";
+import { userValidation } from "../../../validations/validations";
 const bcrypt = require('bcrypt');
 
 export const createNewUser = async (request, reply) =>{
