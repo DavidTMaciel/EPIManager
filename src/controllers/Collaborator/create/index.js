@@ -1,5 +1,5 @@
 import { createCollaborator } from "../../../repositorys/Collaborator/create";
-import { collaboratorValidation } from "../../../validations/epi/epi.validations";
+import { collaboratorValidation } from "../../../validations/validations";
 
 export const createNewCollaborator = async (request, reply) =>{
 
