@@ -1,24 +1,29 @@
 import Fastify from 'fastify'
 import fastifyRoutes from './routes';
+import configureSwagger from './swagger';
+import configureRoutes from './swagger/routes';
 
+const startServer = async () => {
 
-const fastify = Fastify({
+  const fastify = Fastify({
     logger: true
-  })
+  });
 
+  await configureSwagger(fastify);
+  fastify.register(fastifyRoutes);
 
-
-fastify.register(fastifyRoutes)
-
-
-fastify.get('/', function (request, reply) {
+   
+  fastify.get('/', function (request, reply) {
     reply.send({ hello: 'world' })
   })
 
-fastify.listen({ port: 3000 }, function (err, address) {
-  if (err) {
-    fastify.log.error(err)
-    process.exit(1)
-  }
-  console.log("Server listing address: " + address)
-})
+  fastify.listen({ port: 3000 }, function (err, address) {
+    if (err) {
+      fastify.log.error(err)
+      process.exit(1)
+    }
+    console.log("Server listing address: " + address)
+  })
+};
+
+startServer();
