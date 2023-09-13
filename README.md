@@ -29,6 +29,49 @@ Aqui estão as principais tecnologias utilizadas no desenvolvimento do projeto, 
 - **jquery**: Uma biblioteca JavaScript para manipulação de documentos HTML.
 - **@faker-js/faker**: Uma biblioteca para geração de dados falsos para testes.
 
+## Estrutura das Tabelas
+
+Aqui está a estrutura das principais tabelas do banco de dados do EPIManager:
+
+### Tabela `User`
+
+- **id**: Chave primária para identificação do usuário.
+- **name**: Nome do usuário.
+- **email**: Endereço de e-mail do usuário (único).
+- **password**: Senha do usuário.
+- **admin**: Indica se o usuário é um administrador.
+- **createdAt**: Data e hora de criação do registro.
+- **updatedAt**: Data e hora da última atualização do registro.
+
+### Tabela `Collaborator`
+
+- **id**: Chave primária para identificação do colaborador.
+- **name**: Nome do colaborador.
+- **office**: Cargo ou função do colaborador.
+- **admission_Date**: Data de admissão do colaborador.
+- **constructions**: Informações sobre construções associadas ao colaborador.
+- **company**: Nome da empresa do colaborador.
+- **createdAt**: Data e hora de criação do registro.
+- **updatedAt**: Data e hora da última atualização do registro.
+- **releaseForms**: Relação com formulários de liberação.
+
+### Tabela `ListEpis`
+
+- **id**: Chave primária para identificação da lista de EPIs.
+- **name**: Nome da lista de EPIs.
+- **releaseForms**: Relação com formulários de liberação.
+
+### Tabela `ReleaseForm`
+
+- **id**: Chave primária para identificação do formulário de liberação.
+- **collaboratorID**: Chave estrangeira para identificação do colaborador associado.
+- **collaborator**: Relação com o colaborador associado.
+- **itens**: Lista de IDs de itens liberados.
+- **listaItens**: Relação com a lista de EPIs associada.
+
+Esta estrutura de tabelas ajuda a entender como os dados estão organizados no banco de dados do projeto, facilitando a compreensão das relações entre as entidades.
+
+
 ## Documentação de Rotas
 
 A documentação das rotas da API está disponível através do Swagger. Você pode acessar a documentação [aqui](URL_DO_SWAGGER).
