@@ -1,7 +1,7 @@
 import Fastify from 'fastify'
 import fastifyRoutes from './routes';
 import configureSwagger from './swagger';
-import configureRoutes from './swagger/routes';
+
 
 const startServer = async () => {
 
