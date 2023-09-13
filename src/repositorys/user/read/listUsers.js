@@ -10,7 +10,7 @@ export const listUser = async (id) =>{
             name: true,
             email: true,
             password: false,
-            admin: false
+            admin: true
         }
     });
 
