@@ -1,3 +1,4 @@
+const tracer = require('dd-trace').init()
 import Fastify from 'fastify'
 import fastifyRoutes from './routes';
 import configureSwagger from './swagger';
@@ -8,10 +9,9 @@ const startServer = async () => {
   const fastify = Fastify({
     logger: true
   });
-
+  fastify.register(require('fastify-formbody'));
   await configureSwagger(fastify);
   fastify.register(fastifyRoutes);
-
    
   fastify.get('/', function (request, reply) {
     reply.send({ hello: 'world' })
