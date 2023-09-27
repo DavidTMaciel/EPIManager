@@ -12,6 +12,7 @@ export const updateUserById = async (request, reply) =>{
             return reply.code(400).send({ error: "Unauthorized" });
         }
         else if(request.user.isAdmin == true || userId.admin == true || request.user.userId == Number(request.params.id)){
+            
             const user = await updateUser(Number(request.params.id), updateData);
             reply.code(200).send(user);
         }
