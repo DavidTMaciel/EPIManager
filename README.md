@@ -74,7 +74,7 @@ Esta estrutura de tabelas ajuda a entender como os dados estão organizados no b
 
 ## Documentação de Rotas
 
-A documentação das rotas da API está disponível através do Swagger. Você pode acessar a documentação [aqui](URL_DO_SWAGGER).
+A documentação das rotas da API está disponível através do Swagger. Você pode acessar a documentação [aqui](http://127.0.0.1:3000/documentation/static/index.html).
 
 ## Como Iniciar o Projeto e Instalação
 
