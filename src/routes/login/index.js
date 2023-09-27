@@ -1,4 +1,5 @@
 import { newLogin } from "../../controllers/login";
+import { resetPassword } from "../../controllers/login/password";
 
 const routeLogin = (fastify, options, done) => {
 
@@ -30,7 +31,8 @@ const routeLogin = (fastify, options, done) => {
                 },
             },
         }
-    }, newLogin)
+    }, newLogin);
+    fastify.post('/resetPassowrd', resetPassword);
 };
 
 export default routeLogin;
