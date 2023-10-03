@@ -1,0 +1,49 @@
+.table{
+    padding-top: 50px;
+    padding-left: 80px;
+    margin-left: 50px;
+    width: 830px;
+    height: 428px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.set-of-tables{
+    margin-left: 25%;
+}
+tr th,td{
+    padding-right: 132px;
+    font-family: 'Inter', sans-serif;
+}
+th{
+    color: #616060;
+    font-size: 15px;
+    font-weight: bolder;
+}
+td{
+    color: #000000;
+    font-weight: 600;
+    padding-top: 5px;
+}
+
+/* Botão Ativo */
+.active-button {
+    background-color: #FF6E05;
+    color: #fff; /* Texto branco */
+  }
+  
+  /* Botão Inativo */
+  .inactive-button {
+    background-color: #ccc; /* Cor de fundo padrão */
+    color: #717070; /* Texto preto */
+  }
+.set-of-tables button{
+    width: 199px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+ } 
