@@ -59,7 +59,7 @@ export const routesUser = (fastify) => {
                     email: { type: 'string' },
                     password: { type: 'string' },
 
-                },
+                },  
                 required: ['name', 'password', 'email'],
             }
 

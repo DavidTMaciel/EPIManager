@@ -7,14 +7,23 @@ export const createNewEpi = async (request, reply)=>{
         await epiValidation.validate(request.body)
         
         if(!epiValidation.validate(request.body)){
-            send('message: Failed to validate')
+            reply.code(400).send('message: Failed to validate')
         }
-        const data = request.body;
-        const epi = await createEpis(data);
+      
+            const data = request.body;
 
-        reply.code(200).send(epi);
+            if(data.name == null || undefined || typeof data.name === 'number' || !isNaN(data.name)){
+                reply.code(400).send('message: Name required text')
+            }
+
+            const epi = await createEpis(data);
+    
+            reply.code(200).send(epi);
+
 
     }catch(err){
         reply.code(400).send({message: 'Name is required Int'});
     }
 }
+
+

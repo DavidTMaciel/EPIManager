@@ -5,7 +5,7 @@ export const updateForm = async (id, updateData) => {
     const newEpi = await prisma.listEpis.findUnique({where:{id: updateData}})
 
     const form = await prisma.releaseForm.update({
-        where: { id }, // ID do ReleaseForm que você quer atualizar
+        where: { id }, 
         data: {
             listaItens: {
                 connect: [{ id: newEpi.id }],
@@ -17,7 +17,7 @@ export const updateForm = async (id, updateData) => {
             collaborator: {
                 select: {
                     name: true,
-                    function: true,
+                    office: true,
                     admission_Date: true,
                     company: true,
                 },
