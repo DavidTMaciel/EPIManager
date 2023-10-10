@@ -10,7 +10,17 @@ const fastifyRoutes = async (fastify) =>{
     await routeLogin(fastify);
     await routesUser(fastify);
     
-
+    if (process.env.NODE_ENV === 'test'){
+        fastify.addHook("onRequest", async (request, reply) => {
+        });
+    }
+    else{
+        fastify.addHook("onRequest", async (request, reply) => {
+            if (request.raw.url !== '/login' && request.raw.url !== '/users') {
+                await authenticate(request, reply);
+            }
+        });
+    }
     await routesEpi(fastify);
     await routesCollaborator(fastify);
     await routesForm(fastify);
