@@ -1,8 +1,8 @@
-# EPIManager - Gerenciador de Liberação de Equipamento de Proteção Individual (EPI)
+# SafeTI - Gerenciador de Liberação de Equipamento de Proteção Individual (EPI)
 
 ## Sobre o Projeto
 
-O EPIManager é uma API desenvolvida para facilitar o gerenciamento da liberação de Equipamentos de Proteção Individual (EPIs) para colaboradores em ambientes de trabalho. Esta plataforma permite que os administradores cadastrem colaboradores, associando informações individuais, como nome, função, data de admissão e empresa. Cada colaborador possui uma ficha única onde são registrados detalhes sobre os EPIs liberados, incluindo data, tipo de EPI e informações específicas. Além disso, a API mantém um catálogo de itens que podem ser liberados como EPIs, simplificando o processo de liberação e garantindo a segurança dos funcionários.
+O SafeTI é uma API desenvolvida para facilitar o gerenciamento da liberação de Equipamentos de Proteção Individual (EPIs) para colaboradores em ambientes de trabalho. Esta plataforma permite que os administradores cadastrem colaboradores, associando informações individuais, como nome, função, data de admissão e empresa. Cada colaborador possui uma ficha única onde são registrados detalhes sobre os EPIs liberados, incluindo data, tipo de EPI e informações específicas. Além disso, a API mantém um catálogo de itens que podem ser liberados como EPIs, simplificando o processo de liberação e garantindo a segurança dos funcionários.
 
 ## Tecnologias Utilizadas
 
@@ -74,7 +74,7 @@ Esta estrutura de tabelas ajuda a entender como os dados estão organizados no b
 
 ## Documentação de Rotas
 
-A documentação das rotas da API está disponível através do Swagger. Você pode acessar a documentação [aqui](http://127.0.0.1:3000/documentation/static/index.html).
+A documentação das rotas da API está disponível através do Swagger. Você pode acessar a documentação [aqui]().
 
 ## Como Iniciar o Projeto e Instalação
 
