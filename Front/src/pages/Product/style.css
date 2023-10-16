@@ -1,0 +1,262 @@
+.product {
+    display: flex;
+    flex-direction: row;
+}
+
+.registration {
+    width: 50%;
+    margin-top: 4%;
+    border-right: 2px solid #FD6625;
+    margin-left: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-spacing {
+    margin-bottom: 40px;
+
+}
+
+.registration input,
+select {
+    border-color: #a9a9a9;
+}
+
+.email {
+    width: 505px;
+    height: 70px;
+    margin-left: 20px;
+
+}
+
+.width-input-minors {
+    width: 240px;
+    height: 70px;
+    margin-left: 20px;
+}
+
+.registration form {
+    padding-right: 15px;
+    margin-left: 20px;
+    max-width: 600px;
+}
+
+.form-send-email {
+    margin-bottom: 15px;
+    margin-left: 50px;
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    max-width: 80%;
+}
+
+.form-send-email input {
+    margin-right: 10px;
+
+}
+
+.send-form {
+    width: 505px;
+    height: 64px;
+    background-color: #FF5B27;
+    color: #FFFFFF;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+span {
+    text-decoration: underline;
+}
+
+.custom-placeholder::placeholder {
+    font-size: 32px;
+    padding-left: 20px;
+    color: #999;
+}
+
+.registration p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    padding-top: 15px;
+}
+
+.slogan {
+    width: 50%;
+    margin-top: 4%;
+    font-family: 'Inter', sans-serif;
+    margin-left: 2%;
+}
+
+.slogan h2 {
+    font-size: 64px;
+    text-align: left;
+    margin-bottom: 20px;
+    font-weight: 600;
+
+
+}
+
+.slogan p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+    margin-left: 40px;
+    color: #d3d3d3;
+    width: 100%;
+}
+
+.footer hr {
+    border: none;
+    border-top: 1px solid #d3d3d3;
+}
+
+@media screen and (min-width: 320px) and (max-width: 450px) {
+    .product {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .registration {
+        width: 100%;
+        border: none;
+        margin-top: 10%;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        margin: 0;
+        flex-direction: column;
+
+    }
+
+    .width-input-minors {
+        width: 150px;
+        height: 60px;
+        margin-top: 15px;
+        border-radius: 5px;
+    }
+
+    .email {
+        width: 320px;
+        height: 60px;
+        margin: 10px 0 10px 20px;
+        border-radius: 5px;
+    }
+
+    .registration form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: left;
+        margin-left: 5px;
+        width: 100%;
+    }
+
+    .custom-placeholder::placeholder {
+        font-size: 18px;
+        padding-left: 15px;
+    }
+
+    .send-form {
+        width: 260px;
+        height: 64px;
+        font-size: 20px;
+    }
+
+    .input-spacing {
+        margin-bottom: 0px;
+        margin-top: 15px;
+    }
+
+    .form-send-email label {
+        font-size: 10px;
+    }
+
+    .form-send-email {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .registration p {
+        font-size: 10px;
+        padding: 50px 0 50px 0;
+    }
+
+    .send-form {
+        width: 320px;
+        height: 64px;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .form-name {
+        margin-top: 30px;
+    }
+
+    .slogan,
+    .footer {
+        display: none;
+    }
+}
+
+@media screen and (min-width:451px) and (max-width: 1078px) {
+    .product {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .registration {
+        border-right: none;
+        width: 100%;
+        top: 100;
+        margin-top: 220px;
+    }
+
+    .slogan {
+        width: 100%;
+        position: absolute;
+        top: 10;
+        border-bottom: 1px solid #d3d3d3;
+    }
+
+    .slogan h2 {
+        font-size: 33px;
+        text-align: left;
+    }
+    .slogan p{
+        padding-bottom: 20px;
+    }
+
+    .registration input {
+        border-radius: 8px;
+    }
+
+    .select-styled {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    /* Estilo para as opções do select */
+    .select-styled option {
+        background-color: #fff;
+        color: #333;
+    }
+
+
+
+}
