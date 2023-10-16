@@ -3,6 +3,7 @@ import './style.css';
 import logo from '../../img/safetyPNG.png';
 import bandeira from '../../img/bandeira.png';
 import icone from '../../img/icone.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -16,7 +17,7 @@ function NavBar() {
                     <a href="#">Fale com um representante de vendas</a>
                 </div>
                 <div className='nav-links-left-secondary menu'>
-                    <a href="/interface">Login</a>
+                    <Link to="/login">Login</Link>
                     <a href="#">Suporte ao Cliente</a>
                     <a href="#">Sobre</a>
                 </div>
@@ -26,9 +27,9 @@ function NavBar() {
                 <a><img src={logo} alt='Logo da empresa cujo o nome é SafeTy' className='logo'/></a>
                 </div>
                 <div className='nav-links-right-primary'>                   
-                    <a href="#">Assine </a>
-                    <a href="#">Preços </a>
-                    <a href="#">Software </a>
+                    <Link to="/product">Assine </Link>
+                    <Link to="/pagSignature">Preços </Link>
+                    <Link to="/interface">Software </Link>
                 </div>
                 <div>
                     <button><a href=''>Começe gratis ou peça uma demonstração</a></button>
