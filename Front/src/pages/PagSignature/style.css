@@ -1,0 +1,105 @@
+.pagsignature{
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+}
+.topo-signature{
+    margin-top: 20px;
+    text-align: left;
+    padding-left: 10%;
+    border-bottom: 1px solid #d3d3d3;
+    
+}
+.topo-signature h2{
+    color: #FF5B27;
+    font-size: 30px;
+    font-weight: 600;
+}
+.topo-signature p{
+    padding-bottom: 30px;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.plans{
+    background-color: #e9e9e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+    
+}
+.box-plans{
+    width: 222px;
+    height: 500px;
+    background-color: #FFFFFF;
+    margin: 40px 0px 40px 10px;
+    border-top: 1px solid #FF5B27;
+}
+.box-plans h3{
+    color:#FF8577;
+    font-size: 18px;
+    padding-top: 20px;
+}
+.box-plans button{
+    background-color: #FD6625;
+    color: #FFFFFF;
+    width: 155px;
+    height: 35px;
+    font-size: 16px;
+    margin-top: 45%;
+    border: none;
+}
+
+@media screen and (min-width: 1300px) {
+    .box-plans{
+        width: 270px;
+        height: 700px;
+        margin-left: 20px;
+    }
+}
+@media screen and (min-width:320px) and (max-width:720px){
+    .plans{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+    }
+    .box-plans{
+        height: 300px;
+        width: 280px;
+        margin: 20px 0 10px 0px;
+    }
+    .pagsignature{
+        font-family: 'Inter', sans-serif;
+        height: 100%;
+    }
+    .topo-signature h2{
+        font-size: 25px;
+    }
+    .topo-signature p{
+        padding-bottom: 30px;
+        font-size: 16px;
+        padding-left: 10px;
+    }
+    .topo-signature{
+        margin-top: 10px;
+        text-align: left;
+        padding-left: 5%;
+        border-bottom: 1px solid #d3d3d3;       
+    }
+}
+@media screen and (min-width:720px) and (max-width:1060px){
+    .box-plans{
+        width: 190px;
+        height: 500px;
+        background-color: #FFFFFF;
+        margin: 80px 10px 20px 10px;
+        border-top: 1px solid #FF5B27;
+    }
+    .plans{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
