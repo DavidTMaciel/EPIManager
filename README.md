@@ -7,7 +7,7 @@ O SafeTI é uma API desenvolvida para facilitar o gerenciamento da liberação d
 ## Tecnologias Utilizadas
 
 Aqui estão as principais tecnologias utilizadas no desenvolvimento do projeto, conforme especificado no arquivo `package.json`:
-
+## Back
 - **Prisma**: Um ORM (Object-Relational Mapping) que simplifica o acesso e a manipulação do banco de dados MySQL.
 - **Fastify**: Um framework web extremamente eficiente e de alto desempenho para Node.js, projetado para simplificar a criação de APIs com velocidade e eficiência impressionantes.
 - **dotenv**: Uma biblioteca para carregar variáveis de ambiente a partir de um arquivo `.env`, mantendo as informações sensíveis seguras.
@@ -28,6 +28,13 @@ Aqui estão as principais tecnologias utilizadas no desenvolvimento do projeto, 
 - **chance**: Uma biblioteca para geração de dados aleatórios.
 - **jquery**: Uma biblioteca JavaScript para manipulação de documentos HTML.
 - **@faker-js/faker**: Uma biblioteca para geração de dados falsos para testes.
+
+## Front
+
+- axios: Uma biblioteca para realizar requisições HTTP.
+- react: Uma biblioteca para construir interfaces de usuário.
+- react-dom: Uma biblioteca para renderizar componentes React no navegador.
+- react-router-dom: Uma biblioteca para gerenciar a navegação entre páginas em aplicativos React.
 
 ## Estrutura das Tabelas
 
