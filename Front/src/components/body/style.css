@@ -114,3 +114,23 @@
     }
 
 }
+@media screen and (min-width:1300px){
+    .banner{
+        height: 800px;
+    }
+    .banner p{
+        font-size: 90px;
+    }
+    .secondary-session img{
+        height: 600px;
+    }
+    .values p{
+        font-size: 29px;
+    }
+    .values h2{
+        font-size: 29px;
+        font-weight: 500;
+        padding-left: 10px;
+    }
+
+}
