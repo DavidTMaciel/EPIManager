@@ -1,0 +1,66 @@
+.interface-collaborator{
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    overflow-y: auto;
+    border-bottom: 2px solid #FD6625;
+}
+.interface-collaborator th{
+    border-bottom: 1px solid #616060;
+    color: #616060;
+}
+.view-collaborator{
+    height: 100vw;
+}
+.interface-collaborator{
+    font-family: 'Inter', sans-serif;
+}
+.interface-collaborator table{
+    padding: 0 20px 0 20px;
+}
+.interface-collaborator td{
+    color: #000000;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1400px){
+    .interface-collaborator{
+        overflow: auto;
+        width: 900px;
+        margin-top: 2%;
+        margin-left: 28%;
+        height: 600px;
+    }
+    .interface-collaborator th{
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+    }
+    .interface-collaborator td{
+        padding-top: 20px;
+    }   
+
+}
+
+@media screen and (min-width: 1400px){
+    .interface-collaborator{
+        overflow: auto;        
+        width: 1030px;
+        margin-top: 2%;
+        margin-left: 30%;
+        height: 700px;
+    }
+    .interface-collaborator td {
+        padding-left: 0px;
+    }
+    .interface-collaborator th{
+        padding-top: 15px;
+        font-size: 18px;
+        padding-bottom: 15px;
+    }
+    .interface-collaborator td{
+        padding-top: 20px;
+    }   
+
+}
+
+
