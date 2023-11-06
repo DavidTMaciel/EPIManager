@@ -1,0 +1,79 @@
+.form-container {
+  /* Rectangle 16 */
+  margin-top: 2%;
+  margin-left: 20%;
+  box-sizing: border-box;
+  width: 807px;
+  height: 402px;
+
+
+  background: #F5F5F5;
+  border-bottom: 2px solid #FD6625;
+  border-radius: 20px;
+
+}
+.registerCollaborator h2{
+    padding-top: 50px;
+    margin-left: 20%;
+    font-size: 28px;
+    color: #797878;
+    font-family: 'Inter';
+    font-weight: 800;
+}
+
+.register-name input {
+  /* Rectangle 16 */
+  box-sizing: border-box;
+  margin-top: 45px;
+  width: 700px;
+  height: 55px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 20px;
+}
+
+.inputs-collaborator input {
+  /* Rectangle 17 */
+
+  box-sizing: border-box;
+  width: 329px;
+  height: 55px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 20px;
+  margin-top: 35px;
+  margin-left: 50px;
+
+}
+
+
+.inputs-collaborator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.form-container button {
+  margin-top: 150px;
+  width: 207px;
+  height: 64px;
+  background: #FF5B27;
+  border-radius: 8px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  color: #FFFFFF;
+  border: none;
+
+}
+.input-field::placeholder {
+  color: #bdbebd; 
+  font-size: 15px;
+  padding-left: 40px;
+  padding-top: 60px;
+  font-family: 'Inter', sans-serif;
+
+}
