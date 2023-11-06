@@ -2,7 +2,7 @@ import React from 'react';
 
 const TableEpi = () => {
     return (
-        <div className='table'>
+        <div className='default-interface'>
             <table>
                 <thead>
                     <tr>
