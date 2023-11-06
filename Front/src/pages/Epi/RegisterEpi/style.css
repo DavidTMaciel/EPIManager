@@ -1,0 +1,51 @@
+.register-epi{
+    margin-top: -20px;
+    background-color: #F5F5F5;
+    width: 807px;
+    height: 360px;
+    margin-left: 25%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #FD6625;
+    border-radius: 8px;
+
+}
+.register-epi input{
+    width: 329px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #d3d3d3;
+    margin-top: 100px;
+    
+}
+.register-epi button{
+    margin-top: 250px;
+    background-color: #FF6E05;
+    color: #ffffff;
+    width: 200px;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    margin-left: 35%;
+    font-size: 20px;
+}
+.register h2{
+    margin-left: 22%;
+    margin-top: 45px;
+    margin-bottom: 18px;
+    padding-bottom: 20px;
+    background-color: #FD6625;
+    color: #ffffff;
+    width: 199px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+}
