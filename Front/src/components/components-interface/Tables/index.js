@@ -12,20 +12,19 @@ const TableApp = () => {
 
   return (
     <div className='set-of-tables'>
-      <div>
+      <div className='container-buttons-interface'>
       <button
           onClick={alternarTabela}
           className={displayTableRelease ? 'active-button' : 'inactive-button'}
         >
-          Mais Liberados
+        Mais Liberados
         </button>
         <button
           onClick={alternarTabela}
           className={displayTableRelease ? 'inactive-button' : 'active-button'}
         >
-          Últimas Entregas
+        Últimas Entregas
         </button>
-
       </div>
       {displayTableRelease ? <TableRelease /> : <TableEpi />}
     </div>
@@ -33,3 +32,4 @@ const TableApp = () => {
 };
 
 export default TableApp;
+

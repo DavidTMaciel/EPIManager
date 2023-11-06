@@ -1,26 +1,26 @@
-.table{
-    padding-top: 50px;
-    padding-left: 80px;
-    margin-left: 50px;
-    width: 830px;
-    height: 428px;
+.default-interface{
+    width: 890px;
+    height: 600px;
     background-color: #F5F5F5;
     border-radius: 10px;
+    margin-left: 28%;
+    border-bottom: 2px solid #FD6625;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
-.set-of-tables{
-    margin-left: 25%;
-}
-tr th,td{
-    padding-right: 132px;
+.default-interface tr{
+    padding-top: 5px;
+    padding-right: 60px;
     font-family: 'Inter', sans-serif;
+    padding-left: 50px;
 }
-th{
+.default-interface th{
     color: #616060;
     font-size: 15px;
     font-weight: bolder;
 }
-td{
+.default-interface td{
     color: #000000;
     font-weight: 600;
     padding-top: 5px;
@@ -30,13 +30,13 @@ td{
 .active-button {
     background-color: #FF6E05;
     color: #fff; /* Texto branco */
-  }
+}
   
   /* Botão Inativo */
-  .inactive-button {
+.inactive-button {
     background-color: #ccc; /* Cor de fundo padrão */
     color: #717070; /* Texto preto */
-  }
+}
 .set-of-tables button{
     width: 199px;
     height: 35px;
@@ -47,6 +47,13 @@ td{
     font-size: 16px;
     font-weight: bold;
  } 
+ .container-buttons-interface{
+    margin-left: 25%;
+ }
+ .set-of-tables{
+    display: flex;
+    flex-direction: column;
+}
 @media screen and (min-width:1520px){
     .table{
         padding-top: 0px;
@@ -56,15 +63,12 @@ td{
         height: 628px;
         border-radius: 10px;
     }
-    .set-of-tables{
-        margin-left: 30%;
-    }
-    tr th,td{
+    .table tr th,td{
         padding-right: 90px;
         padding-left: 80px;
        
     }
-    td{
+    .table td{
         padding-top: 10px;
     }
 }
@@ -94,15 +98,15 @@ td{
     .set-of-tables{
         margin-left: 5px;
     }
-    tr th,td{
+    .table tr th,td{
         padding-right: 10px;
         padding-left: 10px;
        
     }
-    td{
+    .table td{
         padding-top: 10px;
     }
-    th{
+    .table th{
         font-size: 10px;
 
     }
@@ -112,8 +116,14 @@ td{
         margin-top:25px;
         font-size: 12px;
      } 
-     tr, th{
+     .table tr, th{
         margin: auto;
      }
 }
     
+@media screen and (min-width: 1300px) {
+    .default-interface{
+        width: 1007px;
+        height: 600px;
+    }
+}
